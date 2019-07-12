@@ -20,8 +20,10 @@ if (command === 'add'){
         console.log("Note Title is taken")
     }
 }
-else if(command === 'false'){
-    notes.getAll()
+else if(command === 'list'){
+    let allNotes = notes.getAll();
+    console.log(`Number of Lists are : ${allNotes.length}`);
+    allNotes.forEach((note) => notes.getLog(note));
 }
 else if(command === 'read'){
     let note = notes.getNote(argv.title);

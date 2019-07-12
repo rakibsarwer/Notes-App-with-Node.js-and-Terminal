@@ -59,10 +59,13 @@ let getLog = (note)=>{
     console.log("Title : "+ note.title);
     console.log("Body : "+ note.body);
 }
-
+let getAll = ()=>{
+    return fatchNotes();
+}
 module.exports = {
     addNote,
     removeNote,
     getNote,
-    getLog
+    getLog,
+    getAll
 }

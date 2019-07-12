@@ -1,7 +1,7 @@
 let person = {
-    name = "Sarwer";
+    name : 'Sarwer'
 }
 
 person.age = 24;
 
-person.name = "Rakib";
+person.name = 'Rakib';
