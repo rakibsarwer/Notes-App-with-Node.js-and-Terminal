@@ -54,7 +54,7 @@ let getNote = (title)=>{
 }
 
 let getLog = (note)=>{
-    
+    debugger;
     console.log("------");
     console.log("Title : "+ note.title);
     console.log("Body : "+ note.body);
