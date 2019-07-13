@@ -3,7 +3,30 @@ const _ = require('lodash');
 const yargs = require('yargs')
 const notes = require('./service');
 
-const argv = yargs.argv;
+const titleOption = {
+    describe:'Title of note',
+    demand:true,
+    alias:'t'
+}
+const bodyOption = {
+    describe:'Body of note',
+    demand:true,
+    alias:'b'
+}
+const argv = yargs
+.command('add','Add New Data',{
+    title:titleOption,
+    body:bodyOption
+})
+.command('list','List of all notes')
+.command('read','Read a single note',{
+    title:titleOption
+})
+.command('remove','Remove a single note',{
+    title:titleOption
+})
+.help()
+.argv;
 
 console.log(argv)
 let command = argv._[0]
